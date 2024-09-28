@@ -1,8 +1,10 @@
 "use client";
 
+import { MyProvider } from "@/store/myContext";
 import localFont from "next/font/local";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { Toaster } from "react-hot-toast";
 import "./globals.css";
 
 const geistSans = localFont({
@@ -27,7 +29,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
+        {/* For Context Api */}
+        <MyProvider>{children}</MyProvider>
+
+        <Toaster />
 
         {pathname !== "/userList" ? (
           <ul className="navbar">
