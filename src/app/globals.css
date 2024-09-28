@@ -3,11 +3,10 @@
   padding: 0;
 }
 
-.navbar li{
-margin-top: 20px;
-font-size: 20px;
-color: green;
-
+.navbar li {
+  margin-top: 20px;
+  font-size: 20px;
+  color: green;
 }
 
 .bg {
@@ -21,4 +20,12 @@ color: green;
   background-color: aqua;
   text-align: center;
   margin-top: 50vh;
+}
+
+.active {
+  color: red !important;
+}
+
+a {
+  text-decoration: none;
 }
