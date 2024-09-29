@@ -30,11 +30,10 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         {/* For Context Api */}
-        <MyProvider>{children}</MyProvider>
 
         <Toaster />
 
-        {pathname !== "/userList" ? (
+        {pathname !== "/userLists" ? (
           <ul className="navbar">
             <li>
               <Link href="/" className={`${pathname === "/" ? "active" : ""}`}>
@@ -51,18 +50,25 @@ export default function RootLayout({ children }) {
             </li>
             <li>
               <Link
-                href="/userList"
-                className={`${pathname === "/userList" ? "active" : ""}`}
+                href="/meals"
+                className={`${pathname === "/meals" ? "active" : ""}`}
               >
-                User List
+                Meals
               </Link>
             </li>
-            <li>Contact</li>
-            <li>Signup</li>
+            <li>
+              <Link
+                href="/userLists"
+                className={`${pathname === "/userList" ? "active" : ""}`}
+              >
+                User Lists
+              </Link>
+            </li>
           </ul>
         ) : (
           <Link href="/">Go Home</Link>
         )}
+        <MyProvider>{children}</MyProvider>
       </body>
     </html>
   );

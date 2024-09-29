@@ -1,12 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 * {
   margin: 0;
   padding: 0;
 }
 
-.navbar li {
-  margin-top: 20px;
-  font-size: 20px;
-  color: green;
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Space between items */
+  align-items: center; /* Center items vertically */
+  background-color: #333; /* Dark background */
+  padding: 10px 20px; /* Padding around the navbar */
+}
+.navbar a {
+  color: white; /* White text */
+  text-decoration: none; /* Remove underline */
+  padding: 10px 15px; /* Padding for links */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+.navbar a:hover {
+  background-color: #575757; /* Darker background on hover */
 }
 
 .bg {
@@ -33,4 +48,33 @@ a {
 .facebook {
   color: blue;
   font-size: 50px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin: 10px 20px;
+}
+
+.item {
+  background-color: #4caf50; /* Example background color */
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.btn-red {
+  background-color: #ff0000; /* Red background */
+  color: white; /* White text */
+  padding: 10px 20px; /* Vertical and horizontal padding */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 16px; /* Font size */
+  transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+.btn-red:hover {
+  background-color: #cc0000; /* Darker red on hover */
 }
